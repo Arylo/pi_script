@@ -4,7 +4,7 @@
 # Version: 0.0.1
 #####
 
-echo "Install Script Start..."
+echo "+ Install Script Start..."
 
 # Replace Source
 chmod +x ./sources.sh

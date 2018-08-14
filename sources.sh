@@ -25,4 +25,4 @@ sed -i "s/^[^#]/# &/g" /etc/apt/sources.list
 echo "deb "$url" "$version" main non-free contrib" > /etc/apt/sources.list.d/ali.list
 echo "deb-src "$url" "$version" main non-free contrib" >> /etc/apt/sources.list.d/ali.list
 
-echo "Replace \`Ali Soucre\` Finished!"
+echo "+ Replace \`Ali Soucre\` Finished!"
