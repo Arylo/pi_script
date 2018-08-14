@@ -1,7 +1,7 @@
 #!/bin/bash
 #####
 # UpdatedAt: 2018.08.14
-# Version: 0.0.2
+# Version: 0.0.3
 #####
 
 # Replace Source
@@ -30,8 +30,8 @@ apt-get update
 git --version || apt-get -y install git
 
 # Clone Scripts
-git clone https://github.com/Arylo/pi_script.git
-cd pi_script
+git clone --depth=1 https://github.com/Arylo/pi_script.git /tmp/pi_script
+cd /tmp/pi_script
 
 # Install
 bash ./install.sh
