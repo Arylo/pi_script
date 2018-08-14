@@ -1,8 +1,12 @@
 #!/bin/bash
+#####
+# UpdatedAt: 2018.08.14
+# Version: 0.0.2
+#####
 
 # Replace Source
 ## Backup Source List File
-cp /etc/apt/sources.list /etc/apt/sources.list.bak
+cp -f /etc/apt/sources.list /etc/apt/sources.list.bak
 ## region Relpcae
 version=stretch
 url=http://mirrors.aliyun.com/raspbian/raspbian/
@@ -16,8 +20,9 @@ do
     fi
 done
 
-echo "deb "$url" "$version" main non-free contrib" > /etc/apt/sources.list
-echo "deb-src "$url" "$version" main non-free contrib" >> /etc/apt/sources.list
+sed -i "s/^[^#]/# &/g" /etc/apt/sources.list
+echo "deb "$url" "$version" main non-free contrib" > /etc/apt/sources.list.d/ali.list
+echo "deb-src "$url" "$version" main non-free contrib" >> /etc/apt/sources.list.d/ali.list
 ## endregion Relpcae
 
 # Install Git
@@ -28,6 +33,5 @@ git --version || apt-get -y install git
 git clone https://github.com/Arylo/pi_script.git
 cd pi_script
 
-# Install Speak IP
-chmod +x ./speak_ip.sh
-bash ./speak_ip.sh
+# Install
+bash ./install.sh
