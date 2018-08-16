@@ -19,3 +19,9 @@ curl https://raw.githubusercontent.com/Arylo/pi_script/master/sources.sh | sudo 
 ```bash
 curl https://raw.githubusercontent.com/Arylo/pi_script/master/speak_ip.sh | sudo bash
 ```
+
+### 安装`Jenkins`
+
+```bash
+curl https://raw.githubusercontent.com/Arylo/pi_script/master/jenkins.sh | sudo bash
+```
