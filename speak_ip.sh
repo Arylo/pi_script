@@ -10,7 +10,7 @@ rm -rf ~/speak_raspi_ip
 git clone --depth=1 https://github.com/ma6174/speak_raspi_ip.git ~/speak_raspi_ip
 apt-get install -y mpg123
 rm -rf /var/speak_raspi_ip/
-mv speak_raspi_ip /var/
+mv ~/speak_raspi_ip /var/
 [`grep "$command" /etc/rc.local | wc -l` -ne 0] || sed -i "s/exit 0$/$command\nexit 0/" /etc/rc.local
 
 echo "+ Install \`Speak IP\` Finished!"
